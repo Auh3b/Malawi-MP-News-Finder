@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Political Accontability - Malawi</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="main-header bg-gray-700 text-gray-100 p-2 mb-8">
+      <h1 class="title font-bold text-center text-5xl">
+        Know Your Representative
+      </h1>
+      <small class="block text-center"
+        >Powered by
+        <a
+          class="text-blue-500 text-center no-underline"
+          href="https://serpapi.com"
+          target="_blank"
+          >SerpAPI</a
+        >
+      </small>
+    </header>
+
+    <!-- main section -->
+    <main class="main-content my-10 px-5 flex md:flex-row flex-col">
+      <div class="find-rep md:w-3/12 w-full py-2 px-5">
+        <div class="form">
+          <!-- find form -->
+          <form>
+            <div class="form-input flex flex-col gap-2">
+              <div class="form-group">
+                <label for="Name">Name: </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Kondwani Nankhumwa"
+                  class="py-1 px-2 my-2 w-full border-2 border-gray-500"
+                />
+              </div>
+              <div class="form-group">
+                <label for="constituency">District: </label>
+                <input
+                  type="text"
+                  name="constituency"
+                  id="constituency"
+                  placeholder="Lilongwe"
+                  class="py-1 px-2 my-2 w-full border-2 border-gray-500"
+                />
+              </div>
+              <div class="form-select">
+                <label for="party">Party:</label>
+                <select
+                  name="party"
+                  id="party"
+                  class="py-1 px-2 my-2 w-full border-2 border-gray-500"
+                >
+                  <option value="">Select Party</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-select">
+              <label class="my-2" for="reps"
+                >"Click on Representative of interest"</label
+              >
+              <select
+                name="reps"
+                id="reps"
+                class="py-1 px-2 my-2 w-full border-2 border-gray-500 h-40"
+                multiple
+              ></select>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="md:w-3/12 w-full rep-showcase flex items-center justify-center"
+      >
+        <p class="text-center py-10">Select Representative Info</p>
+      </div>
+      <div
+        class="
+          info-loc
+          md:w-6/12
+          w-full
+          flex flex-col
+          gap-4
+          overflow-x-hidden overflow-y-scroll
+          shadow-inner
+          items-center
+          justify-center
+        "
+      >
+        <p class="text-center">
+          Get News Articles for the selected Representative
+        </p>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer
+      class="
+        main-footer
+        p-10
+        bg-gray-300
+        text-gray-800
+        grid
+        md:grid-cols-2
+        grid-cols-1
+        gap-4
+      "
+    >
+      <div class="copyright mx-auto">
+        <p>
+          Copyright &copy; <span class="date"></span>
+          <span class="author text-blue-500"></span>
+        </p>
+        <div class="links my-5">
+          <ul class="flex flex-row justify-between">
+            <li>
+              <i class="fab fa-linkedin p-1 text-2xl text-gray-800"></i>
+            </li>
+            <li>
+              <i class="fab fa-github p-1 text-2xl text-gray-800"></i>
+            </li>
+            <li>
+              <i class="fab fa-twitter p-1 text-2xl text-gray-800"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact">
+        <p class="text-4xl text-gray-800 font-bold">Hit us up...</p>
+        <form>
+          <div class="group flex flex-col">
+            <label for="name" class="label text-lg my-1">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Doe"
+              class="w-5/6 py-2 px-4 my-1"
+            />
+          </div>
+          <div class="group flex flex-col">
+            <label for="email" class="label text-lg my-1">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="jdoe@fakemail.com"
+              class="w-5/6 py-2 px-4 my-1"
+            />
+          </div>
+          <div class="group flex flex-col">
+            <label for="name" class="label text-lg my-1">Message: </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="You up?"
+              class="w-5/6 py-2 px-4 my-1"
+            ></textarea>
+          </div>
+          <input
+            type="submit"
+            value="Submit"
+            class="py-2 px-4 mt-4 bg-gray-800 text-gray-100"
+          />
+        </form>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

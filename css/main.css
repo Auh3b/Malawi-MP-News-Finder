@@ -1,0 +1,11 @@
+.info-loc{
+    height: 450px;
+}
+body::-webkit-scrollbar,.info-loc::-webkit-scrollbar{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb,
+.info-loc::-webkit-scrollbar-thumb{
+    background: #2d3748;
+}
